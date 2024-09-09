@@ -1,7 +1,8 @@
 <?php
-
+//Conexión base de datos.
 $conexion = mysqli_connect('127.0.0.1', 'usuario', '123', 'publico', '3306');
 
+//Validación sencilla, para verificar si se realizo la conexión.
 if ($conexion->connect_error) {
     die("Conexión fallida: " . $conexion->connect_error);
 }

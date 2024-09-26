@@ -10,6 +10,19 @@
     <form onsubmit="guardar(this, event);">
         <label for="nombre">Nombre</label><br>
         <input type="text" name="nombre" id="nombre"><br>
+
+        <label for="civil">Estado civil</label><br>
+        <select name="civil" id="civil">
+            <option value="S">SOLTERO(A)</option>
+            <option value="C">CASADO(A)</option>
+            <option value="D">DIVORCIADO(A)</option>
+        </select><br>
+
+        Masculino <input type="radio" name="genero" value="M" id="generoM" checked>
+        Femenino <input type="radio" name="genero" value="F" id="generoF">
+
+        <br>
+
         <button>Guardar</button>
     </form>
     <div id="resultado"></div>

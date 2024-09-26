@@ -8,10 +8,12 @@ password=prueba
 ');
 
 $nombre = $_POST['nombre'];
+$civil = $_POST['civil'];
+$genero = $_POST['genero'];
 
 $query = "
-    insert into tbl_clientes (nombre)
-    values ('$nombre');
+    insert into tbl_clientes (nombre,civil,genero)
+    values ('$nombre','$civil','$genero');
 ";
 
 pg_query($conexion, $query);

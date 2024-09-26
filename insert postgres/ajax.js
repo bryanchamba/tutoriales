@@ -1,13 +1,15 @@
 function guardar(fmr, e){
     e.preventDefault();
     let nombre = fmr.elements.nombre.value;
+    let civil = fmr.elements.civil.value;
+    let genero = fmr.elements.genero.value;
     fetch('data.php', {
         method: 'POST',
         headers: {
             'Accept': 'text/plain',
             'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: `nombre=${encodeURIComponent(nombre)}`
+        body: `nombre=${encodeURIComponent(nombre)}&civil=${encodeURIComponent(civil)}&genero=${encodeURIComponent(genero)}`
     })
     .then(res => res.text())
     .then(res => {

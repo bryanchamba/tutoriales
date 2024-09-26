@@ -4,29 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <script src="js/materialize.min.js"></script>
 </head>
 <body>
 
-    <form onsubmit="guardar(this, event);">
-        <label for="nombre">Nombre</label><br>
-        <input type="text" name="nombre" id="nombre"><br>
+    <div class="container">
+        <div class="card-panel">
 
-        <label for="civil">Estado civil</label><br>
-        <select name="civil" id="civil">
-            <option value="S">SOLTERO(A)</option>
-            <option value="C">CASADO(A)</option>
-            <option value="D">DIVORCIADO(A)</option>
-        </select><br>
+            <form onsubmit="guardar(this, event);" class="row">
 
-        Masculino <input type="radio" name="genero" value="M" id="generoM" checked>
-        Femenino <input type="radio" name="genero" value="F" id="generoF">
+                <div class="input-field col s12">
+                    <input type="text" name="nombre" id="nombre" placeholder="Nombres completos">
+                    <label for="nombre">Nombre</label>
+                </div>
+        
+                <div class="col s12">
+                    <label>Estado civil</label>
+                    <select name="civil" id="civil" class="browser-default">
+                        <option value="S">SOLTERO(A)</option>
+                        <option value="C">CASADO(A)</option>
+                        <option value="D">DIVORCIADO(A)</option>
+                    </select>
+                </div>
+        
+                <div class="col s12">
+                    <label>
+                        <input type="radio" name="genero" value="M" id="generoM" checked>
+                        <span>Masculino</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="genero" value="F" id="generoF">
+                        <span>Femenino</span>
+                    </label>
+                </div>
+        
+                <div class="input-field col s12 center">
+                    <button class="btn blue">Guardar</button>
+                </div>
+            </form>
+            <div id="resultado"></div>
 
-        <br>
-
-        <button>Guardar</button>
-    </form>
-    <div id="resultado"></div>
-    <script src="ajax.js"></script>
+        </div>
+    </div>
+    <script src="js/ajax.js"></script>
 
 </body>
 </html>

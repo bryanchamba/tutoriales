@@ -12,15 +12,15 @@
     <div class="container">
         <div class="card-panel">
 
-            <form onsubmit="guardar(this, event);" class="row">
+            <form id="fmr" class="row">
 
                 <div class="input-field col s12">
                     <input type="text" name="nombre" id="nombre" placeholder="Nombres completos">
-                    <label for="nombre">Nombre</label>
+                    <label for="nombre">Nombre <span class="red-text">*</span></label>
                 </div>
         
                 <div class="col s12">
-                    <label>Estado civil</label>
+                    <label>Estado civil <span class="red-text">*</span></label>
                     <select name="civil" id="civil" class="browser-default">
                         <option value="S">SOLTERO(A)</option>
                         <option value="C">CASADO(A)</option>
@@ -29,6 +29,7 @@
                 </div>
         
                 <div class="col s12">
+                    <label>Género <span class="red-text">*</span></label>
                     <label>
                         <input type="radio" name="genero" value="M" id="generoM" checked>
                         <span>Masculino</span>
@@ -38,11 +39,18 @@
                         <span>Femenino</span>
                     </label>
                 </div>
+
+                <div class="cil s12">
+                    <div class="right">
+                        <small>Campos obligatorios  <span class="red-text">*</span></small>
+                    </div>
+                </div>
         
                 <div class="input-field col s12 center">
                     <button class="btn blue">Guardar</button>
                 </div>
             </form>
+            
             <div id="resultado"></div>
 
         </div>

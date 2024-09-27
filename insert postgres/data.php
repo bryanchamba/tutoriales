@@ -16,6 +16,9 @@ $query = "
     values ('$nombre','$civil','$genero');
 ";
 
-pg_query($conexion, $query);
+$resultado = pg_query($conexion, $query);
 
-echo 'Registro guardado.';
+echo 
+    $resultado !== false && pg_affected_rows($resultado) > 0 ? 
+        '¡Registro guardado con exito!' : 
+        '¡No se pudo guardar el registro!';
